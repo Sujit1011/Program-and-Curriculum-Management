@@ -7,3 +7,11 @@
 * Open the terminal, change to the directory where you want to clone the **Fusion** repository
 * Clone your repository using `git clone https://github.com/<your_user_name>/Program-and-Curriculum-Management`
 * Enter the cloned directory using `cd Program-and-Curriculum-Management/`
+
+### Setting up environment
+
+* Create a virtual environment  
+  * on **Windows PowerShell**: `virtualenv env`
+* Activate the *env*    
+  * on **Windows PowerShell**: ` .\env\Scripts\activate`     
+* Install the requirements: `pip install -r .\requirements.txt`

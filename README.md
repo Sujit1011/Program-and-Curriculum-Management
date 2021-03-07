@@ -15,3 +15,8 @@
 * Activate the *env*    
   * on **Windows PowerShell**: ` .\env\Scripts\activate`     
 * Install the requirements: `pip install -r .\requirements.txt`
+
+### Running server
+
+* Change directory to **PCM_FusionIIIT** `cd PCM_FusionIIIT`
+* Run the server `python manage.py runserver`

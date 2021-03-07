@@ -1,0 +1,24 @@
+bs4
+celery
+django
+django-allauth
+django-cleanup
+django-debug-toolbar
+django-markdown-deux
+django-notifications-hq
+django-pagedown
+django-semanticui-forms
+django-unused-media
+# gunicorn
+html_text
+jsonschema
+numpy
+pillow
+psycopg2-binary
+python-dateutil
+requests
+whitenoise[brotli]
+xhtml2pdf
+xlrd
+xlwt
+xlsxwriter

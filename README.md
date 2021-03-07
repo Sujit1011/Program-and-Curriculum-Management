@@ -20,7 +20,3 @@
 
 * Change directory to **PCM_FusionIIIT** `cd PCM_FusionIIIT`
 * Run the server `python manage.py runserver`
-
-### Team Members
-
-* Sujit Soren

@@ -5,75 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+        background-image: url();
+        display: block;
+        margin: 8px;
+        }
+        .top
+        { text-align :center;
+        margin: 25px 25px x;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top :5px;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        .styled-table {
+                border-collapse: collapse;
+                margin: 25px 25px 25px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top :70px;
+                font-size: 0.9em;
+                font-family: sans-serif;
+                min-width: 400px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            }
+        li{
+            padding: 20px;
+            font-weight: bold;
+        }
+
+
+            .styled-table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+            .styled-table tbody tr:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+
+            .styled-table tbody tr:last-of-type {
+                border-bottom: 2px solid #009879;
+            }
+
+    </style>
 </head>
 <body>
-    <div style="padding-top: 50px;">
-        <table style="border: 1px solid black; background-color: black;" cellspacing="15" width="100%">
+    <div class="top">
+       <h1>Programme</h1>
+   </div>
+    <div>
+        <table class="styled-table">
+            <thead>
+                <tr style="text-align: center;">
+                    <th>UG: Under Graduate</th>
+                    <th>PG: Post Graduate</th>
+                    <th>PHD: Doctor of Philosophy</th>
+                </tr>
+            </thead>
             <tbody>
-            <tr style="height: 23px; ">
-            <td style="width: 335px; height: 23px; border: 1px solid black;  background-color:white; text-align: center;">
-            <h3>UG: Under Graduate</h3>
-            </td>
-            <td style="width: 335px; height: 23px; border: 1px solid black;  background-color:white; text-align: center;">
-            <h3>PG: Post Graduate</h3>
-            </td>
-            <td style="width: 335px; height: 23px; border: 1px solid black;  background-color:white; text-align: center;">
-            <h3>PHD: Doctor of Philosophy</h3>
-            </td>
-            </tr>
-            <tr style="height: 154.8px;">
-            <td style="width: 335px; height: 154.8px; border: 1px solid black;  background-color:white;">
-            <ul>
-            <li>
-            <h5>B-Tech (Computer Science Engineering)</h5>
-            </li>
-            <li>
-            <h5>B-Tech (Electronics and Communication Engineering)</h5>
-            </li>
-            <li>
-            <h5>B-Tech (Mechanical Engineering)</h5>
-            </li>
-            <li>
-            <h5>B-Tech (Smart Manufactring)</h5>
-            </li>
-            <li>
-            <h5>Bachelor of Design</h5>
-            </li>
-            </ul>
-            </td>
-            <td style="width: 335px; height: 154.8px; border: 1px solid black;  background-color:white;">
-            <ul>
-            <li>
-            <h5>M-Tech (Computer Science Engineering)</h5>
-            </li>
-            <li>
-            <h5>M-Tech (Electronics and Communication Engineering)</h5>
-            </li>
-            <li>
-            <h5>M-Tech (Mechanical Engineering)</h5>
-            </li>
-            <li>
-            <h5>Bachelor of Design</h5>
-            </li>
-            </ul>
-            </td>
-            <td style="width: 335px; height: 154.8px; border: 1px solid black;  background-color:white;">
-            <ul>
-            <li>
-            <h5>PHD (Computer Science Engineering)</h5>
-            </li>
-            <li>
-            <h5>PHD (Electronics and Communication Engineering)</h5>
-            </li>
-            <li>
-            <h5>PHD (Mechanical Engineering)</h5>
-            </li>
-            <li>
-            <h5>PHD (Mathematics)</h5>
-            </li>
-            </ul>
-            </td>
-            </tr>
+                <tr>
+                    <td>
+                        <ul>
+                        <li>
+                            B-Tech (Computer Science Engineering)
+                        </li>
+                        <li>
+                            B-Tech (Electronics and Communication Engineering)
+                        </li>
+                        <li>
+                            B-Tech (Mechanical Engineering)
+                        </li>
+                        <li>
+                            B-Tech (Smart Manufactring)
+                        </li>
+                        <li>
+                            Bachelor of Design
+                        </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                        <li>
+                            M-Tech (Computer Science Engineering)
+                        </li>
+                        <li>
+                            M-Tech (Electronics and Communication Engineering)
+                        </li>
+                        <li>
+                            M-Tech (Mechanical Engineering)
+                        </li>
+                        <li>
+                            Bachelor of Design
+                        </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                        <li>
+                            PHD (Computer Science Engineering)
+                        </li>
+                        <li>
+                            PHD (Electronics and Communication Engineering)
+                        </li>
+                        <li>
+                            PHD (Mechanical Engineering)
+                        </li>
+                        <li>
+                            PHD (Mathematics)
+                        </li>
+                        </ul>
+                    </td>
+                </tr>
             </tbody>
             </table>
     </div>

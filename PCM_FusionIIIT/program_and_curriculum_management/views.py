@@ -7,7 +7,7 @@ from .models import Programme
 def programme(request):
     ug = Programme.objects.filter(category='UG')
     pg = Programme.objects.filter(category='PG')
-    phd = Programme.objects.filter(category='PHD')
+    phd = Programme.objects.filter(category='PHD') 
     return render(request,'programme.html',{'UG':ug, 'PG':pg, 'PHD':phd})
 
 def curriculum(request):

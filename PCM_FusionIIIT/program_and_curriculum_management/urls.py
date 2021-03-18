@@ -7,5 +7,5 @@ urlpatterns = [
     path('programme',views.programme, name='program_and_curriculum_management'),
     path('curriculum',views.curriculum, name='curriculum'),
     path('courses',views.courses, name='courses'),
-    path('semester',views.semester, name='semester'),
+    path('semester',views.semester, name='semester'), 
 ]

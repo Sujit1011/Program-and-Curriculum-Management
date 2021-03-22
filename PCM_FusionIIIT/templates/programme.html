@@ -25,17 +25,16 @@
                     <td>
                         <ul>
                         {% for ug in UG %}
-                        <li>
-                            {{ ug.title }}
-                        </li>
+                        <li><a href="{% url 'curriculum' ug.id %}">{{ug.title | title }}</a></li>
                         {% endfor %}
                         </ul>
                     </td>
                     <td>
                         <ul>
                         {% for pg in PG %}
-                        <li>
-                            {{ pg.title }}
+                        <li><a href="{% url 'curriculum' pg.id %}">
+                            {{ pg.title | title }}
+                            </a>
                         </li>
                         {% endfor %}
                         </ul>
@@ -43,8 +42,9 @@
                     <td>
                         <ul>
                         {% for phd in PHD %}
-                        <li>
-                            {{ phd.title }}
+                        <li><a href="{% url 'curriculum' phd.id %}">
+                            {{ phd.title | title }}
+                            </a>
                         </li>
                         {% endfor %}
                         </ul>

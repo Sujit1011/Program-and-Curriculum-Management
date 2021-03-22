@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="top">
-        <h1>Curriculum</h1>
+        <h1>Curriculum: <span>{{ Title.title }}</span></h1>
     </div>
     <section>
         <div class="leftside">
@@ -21,30 +21,18 @@
                     <th>Name</th>
                     <th>Batch Year</th>
                     <th> Version</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
+                {% for cc in Current_curriculum %}
                 <tr>
-                    <td>CSE 2018</td>
-                    <td>2018</td>
-                    <td>v3</td>
+                    <td>{{ cc.name }}</td>
+                    <td>{{ cc.batch_year }}</td>
+                    <td>{{ cc.version }}</td>
+                    <td><a href="{% url 'semester' cc.id %}">view</a></td>
                 </tr>
-                <tr >
-                    <td>ECE 2018</td>
-                    <td>2018</td>
-                    <td>v2</td>
-                </tr>
-                <tr>
-                    <td>ME 2018</td>
-                    <td>2018</td>
-                    <td>v2</td>
-                </tr>
-                <tr >
-                    <td>Design 2018</td>
-                    <td>2018</td>
-                    <td>v3</td>
-                </tr>
-
+                {% endfor %}
             </tbody>
             </table>
         </div>
@@ -56,30 +44,18 @@
                         <th>Name</th>
                         <th>Batch Year</th>
                         <th> Version</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
+                    {% for pc in Past_curriculum %}
                     <tr>
-                        <td>CSE 2017</td>
-                        <td>2017</td>
-                        <td>v1</td>
+                        <td>{{ pc.name }}</td>
+                        <td>{{ pc.batch_year }}</td>
+                        <td>{{ pc.version }}</td>
+                        <td><a href="{% url 'semester' pc.id %}">view</a></td>
                     </tr>
-                    <tr >
-                        <td>ECE 2017</td>
-                        <td>2017</td>
-                        <td>v1</td>
-                    </tr>
-                    <tr>
-                        <td>ME 2017</td>
-                        <td>2017</td>
-                        <td>v1</td>
-                    </tr>
-                    <tr >
-                        <td>Design 2017</td>
-                        <td>2017</td>
-                        <td>v1</td>
-                    </tr>
-
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

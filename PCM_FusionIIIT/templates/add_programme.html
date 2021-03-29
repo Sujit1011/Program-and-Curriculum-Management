@@ -15,15 +15,16 @@
     </div>
     <section> 
             <table class="styled-table">
-                <form>
+                <form actions="/add_programme" method="POST">
+                {% csrf_token %}
                 <tbody>
                     <tr>
                         <td>Category: </td>
-                        <td><input type="text" name="category"></td>
+                        <td><input type="text" name="category" id="category"></td>
                     </tr>
                     <tr>
                         <td>Programme: </td>
-                        <td><input type="text" name="curriculum"></td>
+                        <td><input type="text" name="title" id="title"></td>
                     </tr>
                     <tr>
                         <td></td>

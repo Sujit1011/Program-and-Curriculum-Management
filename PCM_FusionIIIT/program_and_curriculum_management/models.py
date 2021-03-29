@@ -20,6 +20,13 @@ class Curriculum(models.Model):
         return self.name +" "+ self.version
 
 
+class Semester(models.Model):
+    semester_no = models.IntegerField()
+    curriculum_id = models.ForeignKey(Curriculum, on_delete=models.CASCADE)
+    def __str__(self):
+        return str(self.semester_no)
+
+
 class Courses(models.Model):
     course_code = models.CharField(max_length=10)
     title = models.CharField(max_length=100)
@@ -41,12 +48,8 @@ class Courses(models.Model):
     # semester_id = models.ForeignKey(Semester, on_delete=models.CASCADE)
 
 
-class Semester(models.Model):
-    semester_no = models.IntegerField()
-    curriculum_id = models.ForeignKey(Curriculum, on_delete=models.CASCADE)
+class Semester_Course_List(models.Model):
+    semester_id = models.ForeignKey(Semester, on_delete=models.CASCADE)
     course_id = models.ForeignKey(Courses, on_delete=models.CASCADE)
-    def __str__(self):
-        return str(self.semester_no)
-
 
 

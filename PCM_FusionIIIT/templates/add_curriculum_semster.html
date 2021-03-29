@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ADD CURRICULUM AND SEMESTERS</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='/static/style.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    <div class="top">
+        <h1>ADD CURRICULUM AND SEMESTERS</h1>
+    </div>
+    <section>
+        <table class="styled-table">
+            <form actions="/add_programme" method="POST">
+                {% csrf_token %}
+                <tbody>
+                    <tr>
+                        <td>Name: </td>
+                        <td><input type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Batch Year: </td>
+                        <td><input type="text" name="year" id="year"></td>
+                    </tr>
+                    <tr>
+                        <td>Programme: </td>
+                        <td>
+                            <select id="programme" name="programme">
+                            {% for prg in Prog %}
+                                <option value="{{ prg.title }}">{{ prg.title | title }}</option>
+                            {% endfor %}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit">Submit</button></td>
+                    </tr>
+                </tbody>
+            </form>
+        </table>
+    </section>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js">
+    </script>
+    <script type="text/javascript">
+       $(function() {
+          $( "#year" ).datepicker({dateFormat: 'yy'});
+       });
+    </script>
+
+</body>
+</html>

@@ -24,7 +24,7 @@ class Semester(models.Model):
     semester_no = models.IntegerField()
     curriculum_id = models.ForeignKey(Curriculum, on_delete=models.CASCADE)
     def __str__(self):
-        return str(self.semester_no)
+        return str(self.semester_no) +" "+ str(self.curriculum_id)
 
 
 class Courses(models.Model):
@@ -44,7 +44,8 @@ class Courses(models.Model):
     evaluation_schema_endsem = models.IntegerField(default=0)
     ref_books = models.CharField(max_length=2000)
     def __str__(self):
-        return self.course_code +" - "+ self.title
+        return self.course_code 
+        # +" - "+ self.title
     # semester_id = models.ForeignKey(Semester, on_delete=models.CASCADE)
 
 

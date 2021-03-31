@@ -10,35 +10,16 @@
 </head>
 <body>
     <div class="top">
-        <h1>ADD CURRICULUM AND SEMESTERS</h1>
+        <h1>ADD CURRICULUM</h1>
     </div>
     <section>
         <table class="styled-table">
             <form actions="/add_programme" method="POST">
                 {% csrf_token %}
                 <tbody>
-                    <tr>
-                        <td>Name: </td>
-                        <td><input type="text" name="name" id="name"></td>
-                    </tr>
-                    <tr>
-                        <td>Batch Year: </td>
-                        <td><input type="text" name="year" id="year"></td>
-                    </tr>
-                    <tr>
-                        <td>Programme: </td>
-                        <td>
-                            <select id="programme" name="programme">
-                            {% for prg in Prog %}
-                                <option value="{{ prg.title }}">{{ prg.title | title }}</option>
-                            {% endfor %}
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><button type="submit">Submit</button></td>
-                    </tr>
+                    {{ form }}
+                    <td></td>
+                    <td><input type="Submit" name="Submit"></td>
                 </tbody>
             </form>
         </table>

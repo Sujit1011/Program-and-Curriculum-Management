@@ -18,18 +18,9 @@
                 <form actions="/add_programme" method="POST">
                 {% csrf_token %}
                 <tbody>
-                    <tr>
-                        <td>Category: </td>
-                        <td><input type="text" name="category" id="category"></td>
-                    </tr>
-                    <tr>
-                        <td>Programme: </td>
-                        <td><input type="text" name="title" id="title"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><button type="submit">Submit</button></td>
-                    </tr>
+                    {{ form }}
+                    <td></td>
+                    <td><input type="Submit" name="Submit"></td>
                 </tbody>
                 </form>
             </table>

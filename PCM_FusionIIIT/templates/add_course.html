@@ -14,50 +14,14 @@
     </div>
     <section>
         <table class="styled-table">
-            <thead>
-                <tr style="text-align: center;">
-                    <th>Course Code</th>
-                    <th style="background-color: white; color: black;"><input type="text" id="course_code" name="course_code"></th>
-                </tr>
-            </thead>
-            <thead>
-                <tr style="text-align: center;">
-                    <th>Course Name</th>
-                    <th style="background-color: white; color: black;"><input type="text" id="course_name" name="course_name"></th>
-                </tr>
-            </thead>
-            <thead>
-                <tr style="text-align: center;">
-                    <th>CONTACT HOUR (number of weeks)</th>
-                    <th style="background-color: white; color: black;"><input type="number" id="contact_hour" name="contact_hour"></th>
-                </tr>
-            </thead>
-
-            <thead>
-                <tr style="text-align: center;">
-                    <th>EVALUATION SCHEMA</th>
-                    <th style="background-color: white; color: black;"><input type="text" id="evaluation_schema" name="evaluation_schema"></th>
-                </tr>
-            </thead>
-            <thead>
-                <tr style="text-align: center;">
-                    <th>Syllabus</th>
-                    <th style="background-color: white; color: black;"><input type="text" id="syllabus" name="syllabus"></th>
-                </tr>
-            </thead>
-            <thead>
-                <tr style="text-align: center;">
-                    <th>REFERENCE BOOKS</th>
-                    <th style="background-color: white; color: black;"><input type="text" id="reference_books" name="reference_books"></th>
-                </tr>
-            </thead>
-            <thead>
-			                <tr style="text-align: center;">
-			                    <th>SUBMIT FORM</th>
-			                    <th style="background-color: white; color: black;"><input type="submit" value="Submit"></th>
-			                </tr>
-            </thead>
-
+        <form actions="/add_courses" method="POST">
+        {% csrf_token %}
+        <tbody>
+            {{ form }}
+                    <td></td>
+                    <td><input type="Submit" name="Submit"></td>
+        </form>
+        </tbody>
         </table>
     </section>
 

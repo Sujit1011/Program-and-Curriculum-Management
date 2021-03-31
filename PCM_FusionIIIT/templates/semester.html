@@ -13,99 +13,24 @@
 <div class = "container">
     <div class="top">
         <h1>Semester</h1>
-        {% comment %} <h1>{{ Curr_name.name }}</h1> {% endcomment %}
+        <h1>{{ curr.name }}</h1>
     </div>
     <section> 
         <table class="styled-table">
             <tbody>
                 
+                {% for s in sem %}
                 <tr>
-                    <td></td>
-                    <th>Semester 1</th>
-                    <td>Course10</td>
-                    <td>Course11</td>
-                    <td>Course12</td>
-                    <td>Course13</td>
-                    <td>Course14</td>
-                    <td>Course15</td>
-                    <td>10</td>
+                    <th>Semester {{ s.semester_no }}</th>
+                    {% for ss in scl %}
+                        {% if ss.semester_id_id == s.id %}
+                            <td><a href="{% url 'courses' ss.course_id_id %}">{{ ss.course_id }}</a></td>
+                        {% endif %}
+                    {% endfor %}
                 </tr>
+                {% endfor %}
                 <tr>
-                    <td></td>
-                    <th>Semester 2</th>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>Semester 3</th>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>Semester 4</th>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>Semester 5</th>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>Semester 6</th>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>Semester 7</th>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>Semester 8</th>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>Course</td>
-                    <td>10</td>
+
                 </tr>
             </tbody>
         </table>

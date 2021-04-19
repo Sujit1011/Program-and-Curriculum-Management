@@ -1,8 +1,15 @@
-from django.shortcuts import render, HttpResponse
-from .models import Programme, Curriculum, Semester, Semester_Course_List, Courses
+from django.shortcuts import render, HttpResponse, HttpResponseRedirect
+from .models import Programme, Curriculum, Semester, CourseSlot, Courses
 from .forms import ProgrammeForm, CurriculumForm, CoursesForm, SemesterForm, SemesterCourseForm, CourseForm
 # Create your views here.
 
+
+def program_and_curriculum_management(request, usr = "acadadmin"):
+    if usr == 'acadadmin':
+        return render(request,'acadadmin_main.html')
+    else:
+        return render(request,'user_main.html')
+        
 
 def programme(request):
     ug = Programme.objects.filter(category='UG')
@@ -19,7 +26,7 @@ def curriculum(request, pro_id):
 def semester(request, cur_id):
     Curr = Curriculum.objects.filter(id = cur_id).first()
     Sem = Semester.objects.filter(curriculum_id_id = cur_id)
-    SCL = Semester_Course_List.objects.all()
+    SCL = CourseSlot.objects.all()
     return render(request,'semester.html',{'sem':Sem, 'curr':Curr, 'scl':SCL})
 
 def courses(request,cour_id):
@@ -101,7 +108,7 @@ def add_course_curriculum(request):
         semester = Semester(semester_no=sem_no, curriculum_id_id=curr_id)
         semester.save()
         sem = Semester.objects.all().last()
-        semester_course = Semester_Course_List(semester_id_id=sem.id, course_id_id=cour_id)
+        semester_course = CourseSlot(semester_id_id=sem.id, course_id_id=cour_id)
         semester_course.save()
     return render(request,'add_course_curriculum.html',{'cur':cur, 'cour':cour})
 

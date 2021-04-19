@@ -31,7 +31,7 @@
                     <td>{{ cc.name }}</td>
                     <td>{{ cc.batch_year }}</td>
                     <td>{{ cc.version }}</td>
-                    <td><a href="{% url 'semester' cc.id %}">view</a></td>
+                    <td><a href="{% url 'program_and_curriculum_management:semester' cc.id %}">view</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -54,7 +54,7 @@
                         <td>{{ pc.name }}</td>
                         <td>{{ pc.batch_year }}</td>
                         <td>{{ pc.version }}</td>
-                        <td><a href="{% url 'semester' pc.id %}">view</a></td>
+                        <td><a href="{% url 'program_and_curriculum_management:semester' pc.id %}">view</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>

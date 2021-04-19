@@ -44,7 +44,7 @@
                         <td>{{ cr.course_code }}</td>
                         <td>{{ cr.title }}</td>
                         <td>{{ cr.credits }}</td>
-                        <td><a href="{% url 'update_course' cr.id %}">update</a></td>
+                        <td><a href="{% url 'program_and_curriculum_management:update_course' cr.id %}">update</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>

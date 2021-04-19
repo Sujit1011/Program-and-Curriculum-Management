@@ -24,7 +24,7 @@
                     <th>Semester {{ s.semester_no }}</th>
                     {% for ss in scl %}
                         {% if ss.semester_id_id == s.id %}
-                            <td><a href="{% url 'courses' ss.course_id_id %}">{{ ss.course_id }}</a></td>
+                            <td><a href="{% url 'program_and_curriculum_management:courses' ss.course_id_id %}">{{ ss.course_id }}</a></td>
                         {% endif %}
                     {% endfor %}
                 </tr>

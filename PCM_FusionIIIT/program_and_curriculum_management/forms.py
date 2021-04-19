@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Programme, Curriculum, Courses, Semester_Course_List, Semester
+from .models import Programme, Curriculum, Courses, CourseSlot, Semester
 
 class ProgrammeForm(ModelForm):  
     class Meta:
@@ -38,7 +38,7 @@ class SemesterForm(ModelForm):
 class SemesterCourseForm(ModelForm):
     
     class Meta:
-        model = Semester_Course_List
+        model = CourseSlot
         fields = ("course_id",)
 
 
